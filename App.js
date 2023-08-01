@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Colors from './constants/color';
 import { StyleSheet, ImageBackground, SafeAreaView } from 'react-native';
 import StartGameScreen from './screens/StartGameScreen';
 import GameScreen from './screens/GameScreen';
@@ -13,11 +14,11 @@ export default function App() {
   }
 
   return (
-    <LinearGradient colors={['#4e0329', '#ddb52f']} style={styles.screenWrapper}>
+    <LinearGradient colors={['#4e0329', Colors.accent500]} style={styles.screenWrapper}>
       <ImageBackground source={require('./assets/images/background.png')}
       resizeMode='cover' style={styles.screenWrapper} imageStyle={styles.backgroundImage} >
         <SafeAreaView style={styles.screenWrapper}>
-        {userNumber ? <GameScreen /> : <StartGameScreen onConfirmNumber={pickedNumberHandler} /> }
+        {userNumber ? <GameScreen userNumber={userNumber} /> : <StartGameScreen onConfirmNumber={pickedNumberHandler} /> }
         </SafeAreaView>
       </ImageBackground>
     </LinearGradient>
