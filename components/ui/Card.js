@@ -1,0 +1,30 @@
+import React from 'react'
+import { View, StyleSheet } from 'react-native'
+import Colors from '../../constants/color'
+
+const Card = ({children}) => {
+  return (
+    <View style={styles.card}>
+        {children}
+    </View>
+  )
+}
+
+export default Card
+
+const styles = StyleSheet.create({
+    card: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: 16,    
+        marginTop: 36,
+        marginHorizontal: 24,
+        backgroundColor: Colors.primary800,
+        borderRadius: 8,
+        elevation: 4,  //Androind Only
+        shadowColor: 'black',  //iOS only
+        shadowOffset: {width:5, height: 5},  //iOS only
+        shadowRadius: 6,  //iOS only
+        shadowOpacity: .5,  //iOS only
+    },
+})
