@@ -53,9 +53,7 @@ export default function App() {
       <ImageBackground source={require('./assets/images/background.png')}
       resizeMode='cover' style={styles.screenWrapper} imageStyle={styles.backgroundImage} >
         <SafeAreaView style={styles.screenWrapper}>
-        {/* {userNumber ? <GameScreen userNumber={userNumber} onGameOver={gameOverHandler} />
-        : !userNumber ? <StartGameScreen onConfirmNumber={pickedNumberHandler} /> 
-        : gameIsOver && userNumber ? <GameOverScreen /> : <StartGameScreen/>} */}
+        
         {screen}
         </SafeAreaView>
       </ImageBackground>
